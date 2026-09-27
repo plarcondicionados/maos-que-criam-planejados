@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: auto;
+  /* useScroll do Framer mede a partir do <html>; precisa estar posicionado */
+  position: relative;
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@layer base {
+  body {
+    @apply bg-linho font-sans text-carvao antialiased;
+    font-feature-settings: 'ss01';
+  }
+  ::selection {
+    @apply bg-freijo-300 text-carvao;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-freijo-500;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-10;
+  }
+
+  /* Etiqueta com traço de cota, como num desenho técnico */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-freijo-600;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply block h-px w-8 bg-current;
+  }
+
+  .titulo {
+    @apply font-display text-[2.1rem] font-light leading-[1.08] tracking-tight text-carvao sm:text-5xl lg:text-[3.5rem];
+  }
+  .titulo em {
+    @apply font-normal italic text-freijo-600;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-500 ease-luxe;
+  }
+  .btn-primario {
+    @apply btn bg-freijo-500 text-white shadow-[0_12px_30px_-12px_rgba(168,114,63,0.8)] hover:bg-freijo-600;
+  }
+  .btn-claro {
+    @apply btn border border-white/35 text-white backdrop-blur-sm hover:bg-white/12;
+  }
+  .btn-escuro {
+    @apply btn border border-carvao/15 text-carvao hover:border-carvao/35 hover:bg-carvao/5;
+  }
+
+  /* Veio de madeira sutil feito só com gradientes (sem imagem) */
+  .veio {
+    background-image: repeating-linear-gradient(
+        96deg,
+        rgba(110, 70, 40, 0.028) 0 2px,
+        transparent 2px 9px,
+        rgba(110, 70, 40, 0.02) 9px 10px,
+        transparent 10px 23px
+      ),
+      radial-gradient(ellipse at 20% 10%, rgba(207, 167, 122, 0.18), transparent 60%);
+  }
+
+  /* Régua de medidas usada como divisor */
+  .regua {
+    height: 14px;
+    background-image: repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 10px),
+      repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 50px);
+    background-size: 100% 6px, 100% 14px;
+    background-repeat: no-repeat;
+    background-position: bottom, bottom;
+    opacity: 0.35;
+  }
+
+  .campo {
+    @apply w-full rounded-xl border border-carvao/12 bg-white px-4 py-3.5 text-[0.95rem] text-carvao placeholder:text-greige transition-colors duration-300 focus:border-freijo-400 focus:outline-none focus:ring-4 focus:ring-freijo-200/50;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
