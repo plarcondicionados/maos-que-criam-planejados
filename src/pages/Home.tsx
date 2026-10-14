@@ -7,6 +7,7 @@ import { Depoimentos } from '@/components/sections/Depoimentos'
 import { Diferenciais } from '@/components/sections/Diferenciais'
 import { Faq } from '@/components/sections/Faq'
 import { Hero } from '@/components/sections/Hero'
+import { Manutencao } from '@/components/sections/Manutencao'
 import { Processo } from '@/components/sections/Processo'
 import { Projetos } from '@/components/sections/Projetos'
 import { Sobre } from '@/components/sections/Sobre'
@@ -21,6 +22,7 @@ export const Home = () => (
       <Diferenciais />
       <Sobre />
       <Ambientes />
+      <Manutencao />
       <Projetos />
       <AntesDepois />
       <Videos />

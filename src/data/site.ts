@@ -45,6 +45,7 @@ export const company = {
 export const navigation = [
   { id: 'sobre', label: 'Nossa história' },
   { id: 'ambientes', label: 'Serviços' },
+  { id: 'manutencao', label: 'Manutenção' },
   { id: 'projetos', label: 'Projetos' },
   { id: 'processo', label: 'Como funciona' },
   { id: 'depoimentos', label: 'Clientes' },
@@ -56,6 +57,7 @@ export const allSections = [
   'inicio',
   'sobre',
   'ambientes',
+  'manutencao',
   'projetos',
   'videos',
   'processo',

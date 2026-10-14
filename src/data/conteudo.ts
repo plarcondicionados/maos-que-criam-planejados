@@ -190,3 +190,18 @@ export const faq = [
     a: 'Preencha o formulário no fim desta página ou chame direto no WhatsApp (16) 99159-4713. Se tiver as medidas ou fotos do ambiente, envie junto.',
   },
 ]
+
+export const manutencao = {
+  eyebrow: 'Reforma e manutenção',
+  title: 'Além de fabricar, o Robim também <em>reforma e faz manutenção</em> em móveis planejados.',
+  text: 'Móvel planejado também precisa de cuidado com o tempo. Com o conhecimento de quem fabrica há mais de 25 anos, avaliamos o seu móvel e resolvemos do ajuste simples à reforma completa.',
+  servicos: [
+    { title: 'Ajuste de portas e gavetas', text: 'Alinhamento de portas desniveladas, gavetas que arrastam ou não fecham direito.' },
+    { title: 'Troca de ferragens', text: 'Substituição de dobradiças, corrediças, puxadores e amortecedores.' },
+    { title: 'Reparos e troca de peças', text: 'Conserto ou substituição de portas, frentes, prateleiras e fundos danificados.' },
+    { title: 'Reformas e adaptações', text: 'Mudanças no móvel existente para um novo uso, um novo espaço ou um novo visual.' },
+  ],
+  dica: 'Mande fotos do móvel pelo WhatsApp: assim já conseguimos ter uma ideia do serviço antes da visita.',
+  cta: 'Pedir avaliação pelo WhatsApp',
+  mensagem: 'Olá! Preciso de reforma/manutenção em um móvel planejado. Posso enviar fotos?',
+}

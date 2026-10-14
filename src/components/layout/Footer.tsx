@@ -16,7 +16,7 @@ export const Footer = () => {
         <div>
           <img src={logoCompleta} alt={company.fullName} width={690} height={540} loading="lazy" className="h-28 w-auto" />
           <p className="mt-6 max-w-xs text-sm leading-relaxed">
-            Marcenaria de móveis planejados em {company.city}/{company.state}. Projetos completos e personalizados, com qualidade e acabamento premium.
+            Marcenaria de móveis planejados em {company.city}/{company.state}. Projetos completos e personalizados, além de reforma e manutenção de móveis planejados.
           </p>
         </div>
 

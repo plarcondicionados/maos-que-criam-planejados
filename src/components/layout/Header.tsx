@@ -65,7 +65,7 @@ export const Header = () => {
             <Logo light={light} />
           </a>
 
-          <nav aria-label="Principal" className="hidden lg:block">
+          <nav aria-label="Principal" className="hidden xl:block">
             <ul className="flex items-center gap-1">
               {navigation.map((item) => {
                 const active = activeId === item.id
@@ -76,7 +76,7 @@ export const Header = () => {
                       onClick={(e) => go(e, item.id)}
                       aria-current={active ? 'true' : undefined}
                       className={cn(
-                        'relative rounded-full px-4 py-2 text-[0.82rem] font-medium transition-colors duration-300',
+                        'relative whitespace-nowrap rounded-full px-3.5 py-2 text-[0.82rem] font-medium transition-colors duration-300',
                         light ? 'text-linho/80 hover:text-white' : 'text-carvao/70 hover:text-carvao',
                         active && (light ? 'text-white' : 'text-carvao'),
                       )}
@@ -113,7 +113,7 @@ export const Header = () => {
               aria-expanded={isOpen}
               aria-controls="menu-mobile"
               aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
-              className={cn('relative flex h-11 w-11 items-center justify-center rounded-full lg:hidden', light ? 'text-white' : 'text-carvao')}
+              className={cn('relative flex h-11 w-11 items-center justify-center rounded-full xl:hidden', light ? 'text-white' : 'text-carvao')}
             >
               <span className={cn('absolute h-px w-5 bg-current transition-transform duration-500 ease-luxe', isOpen ? 'rotate-45' : '-translate-y-1')} />
               <span className={cn('absolute h-px w-5 bg-current transition-transform duration-500 ease-luxe', isOpen ? '-rotate-45' : 'translate-y-1')} />
@@ -131,7 +131,7 @@ export const Header = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="veio fixed inset-0 z-40 overflow-y-auto bg-linho pb-10 pt-28 lg:hidden"
+            className="veio fixed inset-0 z-40 overflow-y-auto bg-linho pb-10 pt-28 xl:hidden"
           >
             <nav aria-label="Menu mobile" className="container-site">
               <ul className="flex flex-col">
