@@ -10,6 +10,7 @@ export const formulario = {
     'Home office',
     'Escritório / empresa',
     'Lavanderia',
+    'Reforma / manutenção',
     'Outro',
   ],
   tipos: ['Residência', 'Empresa'],

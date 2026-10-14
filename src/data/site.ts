@@ -43,8 +43,8 @@ export const company = {
 }
 
 export const navigation = [
-  { id: 'sobre', label: 'Sobre' },
-  { id: 'ambientes', label: 'Ambientes' },
+  { id: 'sobre', label: 'Nossa história' },
+  { id: 'ambientes', label: 'Serviços' },
   { id: 'projetos', label: 'Projetos' },
   { id: 'processo', label: 'Como funciona' },
   { id: 'depoimentos', label: 'Clientes' },

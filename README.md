@@ -56,7 +56,9 @@ Os cards de ambiente também abrem o WhatsApp já citando o ambiente escolhido.
 
 ## Origem das imagens e vídeos
 
-**Reais (Instagram @mqc.planejados)**: todas as fotos do portfólio, dos ambientes Cozinhas, Quartos, Closets, Banheiros, Salas e Gourmet, do antes/depois, da equipe e os 6 vídeos. Foram baixadas dos reels públicos do perfil em 27/09/2026. As fotos são quadros extraídos dos vídeos (`scripts/extrair-fotos-instagram.mjs`), com as tarjas pretas recortadas. A foto do closet é o único post de foto do perfil. Os vídeos foram comprimidos para web (540 px, sem áudio) em `public/videos/`.
+**Fotos de obras enviadas pelo cliente (pasta `Planejados/`, 135 fotos de 2018–2021)**: 34 selecionadas (sem repetidas, prints de tela ou fotos com pessoas na TV) e importadas para `src/assets/images/projetos/` com `node scripts/importar-fotos-planejados.mjs`, que corrige a rotação, limita o tamanho e converte para WebP. São a base do portfólio e dos cards de serviços. A pasta original fica fora do Git (`.gitignore`); para trocar fotos, edite a lista no script e rode de novo.
+
+**Reais (Instagram @mqc.planejados)**: os projetos recentes no fim do portfólio, o card de Closets, o antes/depois, as fotos da equipe e os 6 vídeos. Foram baixadas dos reels públicos do perfil em 27/09/2026. As fotos são quadros extraídos dos vídeos (`scripts/extrair-fotos-instagram.mjs`), com as tarjas pretas recortadas. A foto do closet é o único post de foto do perfil. Os vídeos foram comprimidos para web (540 px, sem áudio) em `public/videos/`.
 
 - As imagens da equipe vêm de um vídeo com a marca d'água **@mayron.f3rr3ira**. O crédito aparece no site.
 
@@ -64,12 +66,12 @@ Os cards de ambiente também abrem o WhatsApp já citando o ambiente escolhido.
 
 - `hero-cozinha-integrada` — fundo do hero
 - `processo-projeto-3d`, `processo-producao` — etapas 2 e 3 do processo (com selo "Imagem ilustrativa")
-- `servico-home-office`, `servico-corporativo` — cards de Home office e Escritórios (com selo "Imagem ilustrativa")
+- `servico-reforma` — card de Reformas e manutenção (com selo "Imagem ilustrativa")
 - `sobre-acabamento` — detalhe na seção Sobre
 
 **Logo**: recortada da imagem enviada (`fotos-originais/logo-original.png`) com `scripts/gerar-logo.mjs`, em versão clara e escura com fundo transparente.
 
-Quando houver fotos reais de home office, escritórios, oficina ou do projeto 3D, troque os arquivos em `src/assets/images/` mantendo o nome e remova `ilustrativa: true` / `real: false` nos dados.
+Quando houver fotos reais de uma reforma/manutenção, da fábrica ou do projeto 3D, troque os arquivos em `src/assets/images/` mantendo o nome e remova `ilustrativa: true` / `real: false` nos dados.
 
 ## Publicação (Render)
 
@@ -78,8 +80,8 @@ O `render.yaml` já configura um site estático. No Render: **New + → Blueprin
 ## Pendências (dados que o cliente precisa fornecer)
 
 1. **Depoimentos reais**: os 4 textos atuais são exemplos (o destaque "Feedback" do Instagram não é público). Troque por depoimentos verdadeiros, com autorização do cliente, antes de divulgar o site. Arquivo: `src/data/conteudo.ts`.
-2. **História da empresa**: ano de início, quem fundou, trajetória. O texto do Sobre é genérico. Arquivo: `src/data/conteudo.ts`.
-3. **Endereço** da marcenaria/showroom (se houver atendimento presencial). Com ele, o mapa passa a mostrar o local exato.
+2. **Fotos da fábrica e de reformas**: a seção Processo ainda usa imagem ilustrativa para a produção, e o card de Reformas e manutenção também. Fotos reais da fábrica atual e de um antes/depois de reforma substituiriam as duas.
+3. **Endereço da fábrica** em Ribeirão Preto (citada na história). Com ele, o mapa passa a mostrar o local exato.
 4. **E-mail** comercial.
 5. **Horário de atendimento**.
 6. **CNPJ e razão social** para o rodapé.

@@ -12,69 +12,78 @@ export const hero = {
   eyebrow: 'Marcenaria sob medida · Ribeirão Preto/SP',
   title: ['Móveis planejados', 'feitos por mãos', 'que entendem de casa.'],
   subtitle:
-    'Cozinhas, quartos, closets, banheiros e escritórios projetados para o seu espaço e a sua rotina — com acabamento premium e montagem pela nossa própria equipe.',
+    'Mais de 25 anos de marcenaria em Ribeirão Preto. Cozinhas, dormitórios, closets, banheiros e escritórios sob medida — e também reforma e manutenção de móveis planejados.',
   ctaPrimary: 'Solicitar orçamento',
   ctaSecondary: 'Ver projetos',
   // Destaques curtos que aparecem no rodapé do hero
   highlights: [
+    { value: '25+', unit: 'anos', label: 'de experiência em marcenaria' },
     { value: '30', unit: 'dias úteis', label: 'fabricação, entrega e montagem' },
-    { value: '3D', unit: 'projeto', label: 'você vê o ambiente antes de produzir' },
-    { value: '100%', unit: 'sob medida', label: 'cada centímetro aproveitado' },
+    { value: '100%', unit: 'sob medida', label: 'do rascunho à instalação' },
   ],
   reelLabel: 'Projeto entregue',
 }
 
 export const sobre = {
-  eyebrow: 'Quem somos',
-  title: 'Cada móvel começa com uma <em>ideia sua</em> e termina nas nossas mãos.',
-  // PENDÊNCIA: confirmar a história real (ano de fundação, fundadores, trajetória).
-  // O Instagram tem o destaque "Nossa História", mas ele não é público sem login.
-  paragraphs: [
-    'A Mãos que Criam nasceu em Ribeirão Preto com um jeito simples de trabalhar: ouvir com atenção, medir com precisão e entregar exatamente o ambiente que o cliente imaginou.',
-    'Somos uma marcenaria de móveis planejados que cuida do projeto completo — do desenho em 3D à montagem final. Muitos clientes chegam com uma referência, uma foto ou só uma vontade. A gente transforma isso em um móvel funcional, bonito e feito para durar.',
+  eyebrow: 'Nossa história',
+  // Texto enviado pelo cliente — manter fiel ao original.
+  title: 'Uma história construída com <em>trabalho, experiência</em> e confiança',
+  intro: [
+    'A MQC Planejados – Mãos que Criam nasceu de um sonho construído com muito trabalho e mais de 25 anos de atuação no ramo da marcenaria.',
+    'À frente da empresa está Robim, que iniciou sua trajetória como empregado e passou por diferentes funções, desenvolvendo domínio de todas as etapas da marcenaria.',
+    'Ao longo desses anos, aprimorou sua capacidade de interpretar e criar projetos, realizar medições e cálculos, dimensionar cada peça, aproveitar materiais, além de executar montagem, instalação e acabamento.',
   ],
-  quote: 'A ideia já existia. Nós apenas a transformamos em realidade.',
-  quoteSource: 'Do nosso Instagram',
+  destaque:
+    'Esse conhecimento permite transformar ideias em realidade. Muitas vezes, o cliente não possui um projeto pronto: traz apenas a ideia do que deseja, e Robim utiliza seu conhecimento técnico para desenvolver e executar o projeto. A partir de uma conversa, um rascunho e as medidas do ambiente, cada peça, medida e encaixe é cuidadosamente planejado para transformar o desejo do cliente em um móvel sob medida.',
+  // Linha do tempo: os mesmos parágrafos da história, divididos por fase
+  trajetoria: [
+    {
+      etapa: 'A garagem',
+      texto:
+        'O sonho de ter seu próprio negócio começou a ganhar forma quando, mesmo trabalhando durante o dia, passou a aceitar projetos particulares e transformar a garagem de casa em espaço de trabalho durante as noites. Foi ali que nasceram os primeiros móveis e os primeiros clientes.',
+    },
+    {
+      etapa: 'O primeiro salão',
+      texto:
+        'A qualidade e o comprometimento com cada projeto trouxeram indicações e, com elas, o crescimento. A garagem ficou pequena, veio o primeiro salão e, poucos meses depois, a necessidade de um espaço maior.',
+    },
+    {
+      etapa: 'A fábrica',
+      texto: 'Assim, a MQC foi crescendo até chegar à sua atual fábrica, em Ribeirão Preto.',
+    },
+  ],
+  valoresIntro: 'Hoje, mantemos os mesmos valores que nos trouxeram até aqui:',
+  valores: ['Seriedade', 'Responsabilidade', 'Qualidade', 'Respeito por cada cliente'],
+  fechamento: 'Do primeiro esboço à instalação, cada detalhe é pensado com cuidado e precisão para transformar uma ideia em realidade.',
+  assinatura: 'MQC Planejados – Mãos que Criam.',
+  assinaturaTexto:
+    'Uma história que começou em uma garagem, cresceu através do trabalho e continua sendo construída pela confiança de nossos clientes.',
   images: {
     main: { src: equipeMontagem, alt: 'Equipe da Mãos que Criam montando armários de cozinha planejada', credit: 'Vídeo: @mayron.f3rr3ira' },
     detail: { src: sobreAcabamento, alt: 'Marceneiro conferindo a medida de uma porta em madeira freijó' },
   },
-  pillars: [
-    {
-      title: 'Missão',
-      text: 'Criar ambientes sob medida que unem beleza, organização e praticidade no dia a dia de quem vive neles.',
-    },
-    {
-      title: 'Como trabalhamos',
-      text: 'Projeto pensado nos detalhes, execução com precisão e acompanhamento de perto até a entrega.',
-    },
-    {
-      title: 'Nosso padrão',
-      text: 'Materiais de alta qualidade, acabamento refinado e pontualidade em cada etapa.',
-    },
-  ],
 }
 
 export const diferenciais = [
+  {
+    icon: 'equipe',
+    title: '25+ anos de marcenaria',
+    text: 'Domínio de todas as etapas: projeto, medição, corte, montagem, instalação e acabamento.',
+  },
+  {
+    icon: 'projeto',
+    title: 'Da ideia ao projeto',
+    text: 'Não tem projeto pronto? A partir de uma conversa, um rascunho e as medidas, desenvolvemos o seu.',
+  },
   {
     icon: 'prazo',
     title: 'Até 30 dias úteis',
     text: 'Fabricação, entrega e montagem em até 30 dias úteis após a aprovação do projeto.',
   },
   {
-    icon: 'projeto',
-    title: 'Projeto 3D',
-    text: 'Você visualiza o ambiente, as cores e os acabamentos antes de qualquer peça ser produzida.',
-  },
-  {
     icon: 'acabamento',
-    title: 'Acabamento premium',
-    text: 'Materiais de alta qualidade, acabamento refinado e execução impecável em cada detalhe.',
-  },
-  {
-    icon: 'equipe',
-    title: 'Equipe própria',
-    text: 'Cada montagem e cada entrega levam o comprometimento do nosso próprio time.',
+    title: 'Reforma e manutenção',
+    text: 'Também reformamos e fazemos manutenção em móveis planejados: ajustes, trocas de ferragens e reparos.',
   },
 ]
 
@@ -85,7 +94,7 @@ export const processo = {
     {
       number: '01',
       title: 'Conversa e medição',
-      text: 'Você conta o que precisa pelo WhatsApp. Agendamos a visita, medimos o ambiente e entendemos sua rotina, estilo e orçamento.',
+      text: 'Você conta o que precisa pelo WhatsApp — pode ser só uma ideia ou um rascunho. Medimos o ambiente e entendemos sua rotina, estilo e orçamento.',
       image: cozinhaVerdeBancada,
       imageAlt: 'Cozinha planejada verde com gavetas e bancada branca',
       real: true,
@@ -163,6 +172,14 @@ export const faq = [
   {
     q: 'Posso levar uma referência ou foto?',
     a: 'Deve! Muitos projetos começam com uma imagem que o cliente guardou. A partir dela adaptamos medidas, materiais e funcionalidade ao seu espaço.',
+  },
+  {
+    q: 'Vocês reformam ou fazem manutenção em móveis planejados?',
+    a: 'Sim. Fazemos reforma e manutenção em móveis planejados: ajuste e alinhamento de portas, troca de dobradiças, corrediças e puxadores, reparos e adaptações. Mande fotos do móvel pelo WhatsApp para avaliarmos.',
+  },
+  {
+    q: 'Não tenho projeto pronto. Vocês desenvolvem?',
+    a: 'Sim. Muitos clientes chegam só com a ideia do que desejam. A partir de uma conversa, um rascunho e as medidas do ambiente, desenvolvemos e executamos o projeto.',
   },
   {
     q: 'Fazem móveis para empresas?',

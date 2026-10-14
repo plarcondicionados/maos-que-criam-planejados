@@ -50,7 +50,7 @@ export const Projetos = () => {
           <SectionHeading
             eyebrow="Projetos entregues"
             title="Ambientes reais, <em>feitos por nós</em>."
-            text="Todas as fotos abaixo são de projetos que produzimos e montamos para clientes em Ribeirão Preto e região."
+            text="Todas as fotos são de projetos que produzimos e montamos para clientes em Ribeirão Preto e região — dos primeiros trabalhos aos mais recentes."
           />
           <Reveal delay={0.1}>
             <div role="tablist" aria-label="Filtrar projetos por ambiente" className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:px-0 lg:max-w-md lg:justify-end">

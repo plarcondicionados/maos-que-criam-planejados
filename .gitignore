@@ -29,3 +29,6 @@ instagram/
 
 # Configuração local do Claude
 .claude/
+
+# Fotos originais enviadas pelo cliente (importadas para src/assets/images/projetos)
+Planejados/

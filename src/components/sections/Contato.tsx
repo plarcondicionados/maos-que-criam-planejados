@@ -36,7 +36,7 @@ export const montarMensagem = (d: Dados) => {
     `*Nome:* ${d.nome.trim()}`,
     `*Telefone:* ${d.telefone}`,
     `*Tipo:* ${d.tipo}`,
-    `*Ambientes:* ${d.ambientes.join(', ')}`,
+    `*Serviço:* ${d.ambientes.join(', ')}`,
   ]
   if (d.fase) linhas.push(`*Fase da obra:* ${d.fase}`)
   if (d.bairro.trim()) linhas.push(`*Bairro/cidade:* ${d.bairro.trim()}`)
@@ -62,7 +62,7 @@ export const Contato = () => {
     const novo: typeof erros = {}
     if (dados.nome.trim().length < 2) novo.nome = 'Informe seu nome.'
     if (dados.telefone.replace(/\D/g, '').length < 10) novo.telefone = 'Informe um telefone com DDD.'
-    if (dados.ambientes.length === 0) novo.ambientes = 'Escolha pelo menos um ambiente.'
+    if (dados.ambientes.length === 0) novo.ambientes = 'Escolha pelo menos uma opção.'
     setErros(novo)
     if (Object.keys(novo).length) return
 
@@ -189,7 +189,7 @@ export const Contato = () => {
             </fieldset>
 
             <fieldset className="mt-6">
-              <legend className="text-sm font-medium">Quais ambientes? *</legend>
+              <legend className="text-sm font-medium">O que você precisa? *</legend>
               <div className="mt-2 flex flex-wrap gap-2">
                 {formulario.ambientes.map((a) => {
                   const on = dados.ambientes.includes(a)
