@@ -110,8 +110,8 @@ export const Hero = () => {
           >
             <div className="overflow-hidden rounded-[1.6rem] border border-white/15 bg-carvao shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)]">
               <video
-                src="/videos/cozinha-verde-tour.mp4"
-                poster="/videos/cozinha-verde-tour.jpg"
+                src={`${import.meta.env.BASE_URL}videos/cozinha-verde-tour.mp4`}
+                poster={`${import.meta.env.BASE_URL}videos/cozinha-verde-tour.jpg`}
                 autoPlay
                 muted
                 loop

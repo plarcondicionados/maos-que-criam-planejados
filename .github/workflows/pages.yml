@@ -25,7 +25,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build
+      # Com public/CNAME (domínio próprio) o site fica na raiz; sem ele, em /<repo>/.
+      - name: Build
+        run: |
+          if [ -f public/CNAME ]; then export VITE_BASE=/; else export VITE_BASE=/${GITHUB_REPOSITORY#*/}/; fi
+          npm run build
       # Landing page única: rotas desconhecidas também abrem o site.
       - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3

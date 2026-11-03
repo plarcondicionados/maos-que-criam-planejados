@@ -180,10 +180,10 @@ export const antesDepois = {
 }
 
 export const videos = [
-  { src: '/videos/cozinha-verde-tour.mp4', poster: '/videos/cozinha-verde-tour.jpg', title: 'Cozinha verde musgo', tag: 'Tour' },
-  { src: '/videos/quarto-tour.mp4', poster: '/videos/quarto-tour.jpg', title: 'Quarto com espelhos', tag: 'Tour' },
-  { src: '/videos/bastidores-equipe.mp4', poster: '/videos/bastidores-equipe.jpg', title: 'Nossa equipe em ação', tag: 'Bastidores' },
-  { src: '/videos/sala-antes-depois.mp4', poster: '/videos/sala-antes-depois.jpg', title: 'Sala: do antes ao resultado', tag: 'Antes & depois' },
-  { src: '/videos/banheiro-tour.mp4', poster: '/videos/banheiro-tour.jpg', title: 'Banheiro em laca', tag: 'Tour' },
-  { src: '/videos/cozinha-freijo-tour.mp4', poster: '/videos/cozinha-freijo-tour.jpg', title: 'Cozinha em freijó', tag: 'Tour' },
+  { src: `${import.meta.env.BASE_URL}videos/cozinha-verde-tour.mp4`, poster: `${import.meta.env.BASE_URL}videos/cozinha-verde-tour.jpg`, title: 'Cozinha verde musgo', tag: 'Tour' },
+  { src: `${import.meta.env.BASE_URL}videos/quarto-tour.mp4`, poster: `${import.meta.env.BASE_URL}videos/quarto-tour.jpg`, title: 'Quarto com espelhos', tag: 'Tour' },
+  { src: `${import.meta.env.BASE_URL}videos/bastidores-equipe.mp4`, poster: `${import.meta.env.BASE_URL}videos/bastidores-equipe.jpg`, title: 'Nossa equipe em ação', tag: 'Bastidores' },
+  { src: `${import.meta.env.BASE_URL}videos/sala-antes-depois.mp4`, poster: `${import.meta.env.BASE_URL}videos/sala-antes-depois.jpg`, title: 'Sala: do antes ao resultado', tag: 'Antes & depois' },
+  { src: `${import.meta.env.BASE_URL}videos/banheiro-tour.mp4`, poster: `${import.meta.env.BASE_URL}videos/banheiro-tour.jpg`, title: 'Banheiro em laca', tag: 'Tour' },
+  { src: `${import.meta.env.BASE_URL}videos/cozinha-freijo-tour.mp4`, poster: `${import.meta.env.BASE_URL}videos/cozinha-freijo-tour.jpg`, title: 'Cozinha em freijó', tag: 'Tour' },
 ]
