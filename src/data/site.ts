@@ -55,6 +55,7 @@ export const navigation = [
 /** Todas as seções (inclusive as fora do menu), na ordem da página. */
 export const allSections = [
   'inicio',
+  'o-que-fazemos',
   'sobre',
   'ambientes',
   'manutencao',

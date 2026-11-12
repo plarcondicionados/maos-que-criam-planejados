@@ -19,13 +19,20 @@ export const Sobre = () => (
       <div className="grid items-center gap-16 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
         <Reveal direction="right" className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative ml-auto w-[82%]">
-            <LazyImage
-              src={sobre.images.main.src}
-              alt={sobre.images.main.alt}
-              width={720}
-              height={1100}
-              wrapperClassName="aspect-[4/5] rounded-[2rem]"
-            />
+            {/* Vídeo real da equipe montando, com a foto como capa enquanto carrega */}
+            <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-linho-200">
+              <video
+                src={`${import.meta.env.BASE_URL}videos/bastidores-equipe.mp4`}
+                poster={sobre.images.main.src}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label={sobre.images.main.alt}
+                className="h-full w-full object-cover"
+              />
+            </div>
             <span className="absolute -right-3 top-8 rounded-full bg-carvao px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-linho sm:-right-5">
               Nossa equipe
             </span>

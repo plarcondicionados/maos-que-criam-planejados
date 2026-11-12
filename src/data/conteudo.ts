@@ -1,24 +1,37 @@
 import heroImg from '@/assets/images/hero-cozinha-integrada.webp'
 import sobreAcabamento from '@/assets/images/sobre-acabamento.webp'
 import equipeMontagem from '@/assets/images/equipe-montagem.webp'
-import processo3d from '@/assets/images/processo-projeto-3d.webp'
-import processoProducao from '@/assets/images/processo-producao.webp'
+import processoMedicao from '@/assets/images/processo-medicao.webp'
+import processoOrcamento from '@/assets/images/processo-orcamento.webp'
+import processoMateriais from '@/assets/images/processo-materiais.webp'
+import processoFabrica from '@/assets/images/processo-fabrica.webp'
 import equipeInstalacao from '@/assets/images/equipe-instalacao.webp'
-import cozinhaVerdeBancada from '@/assets/images/cozinha-verde-bancada.webp'
+import barracaJunina from '@/assets/images/servico-barraca-junina.webp'
+
+/** Campanha de fim de ano: faixa no topo e botão principal do hero. */
+export const campanha = {
+  faixa: '⚠️ Para entrega em Janeiro, fechamento até 30 de Novembro',
+  mensagem:
+    'Olá! Vi que para garantir a entrega em Janeiro preciso fechar em Novembro. Quero ver a disponibilidade para medição e orçamento, quais horários vocês têm?',
+}
 
 export const hero = {
   image: heroImg,
   imageAlt: 'Cozinha planejada integrada com armários em madeira freijó e laca fosca',
   eyebrow: 'Marcenaria sob medida · Ribeirão Preto/SP',
-  title: ['Móveis planejados', 'feitos por mãos', 'que entendem de casa.'],
-  subtitle:
-    'Mais de 25 anos de marcenaria em Ribeirão Preto. Cozinhas, dormitórios, closets, banheiros e escritórios sob medida — e também reforma e manutenção de móveis planejados.',
-  ctaPrimary: 'Solicitar orçamento',
+  title: ['Cozinha planejada', 'em Ribeirão Preto', 'sob medida'],
+  subtitle: [
+    'Mais de 25 anos de marcenaria em Ribeirão Preto. Fazemos móveis planejados sob medida, para residência e comércio.',
+    'Fazemos medição conforme disponibilidade da agenda. Após a medição, seu orçamento fica pronto em 2 a 4 dias.',
+    'Projeto 3D com arquiteto parceiro, conforme disponibilidade.',
+    'Para garantir sua entrega e instalação em Janeiro, com prazo de até 60 dias garantido em contrato, o fechamento precisa ser em Novembro.',
+  ],
+  ctaPrimary: 'Quero garantir minha entrega em Janeiro',
   ctaSecondary: 'Ver projetos',
   // Destaques curtos que aparecem no rodapé do hero
   highlights: [
     { value: '25+', unit: 'anos', label: 'de experiência em marcenaria' },
-    { value: '30', unit: 'dias úteis', label: 'fabricação, entrega e montagem' },
+    { value: '60', unit: 'dias', label: 'prazo máximo garantido em contrato' },
     { value: '100%', unit: 'sob medida', label: 'do rascunho à instalação' },
   ],
   reelLabel: 'Projeto entregue',
@@ -77,8 +90,8 @@ export const diferenciais = [
   },
   {
     icon: 'prazo',
-    title: 'Até 30 dias úteis',
-    text: 'Fabricação, entrega e montagem em até 30 dias úteis após a aprovação do projeto.',
+    title: 'Prazo em contrato',
+    text: 'Entrega e instalação em até 60 dias, com o prazo garantido em contrato.',
   },
   {
     icon: 'acabamento',
@@ -90,42 +103,75 @@ export const diferenciais = [
 export const processo = {
   eyebrow: 'Como funciona',
   title: 'Do primeiro contato ao ambiente <em>pronto para usar</em>.',
+  text: 'Cinco etapas claras, com você acompanhando cada uma. Entrega e instalação em até 60 dias, garantido em contrato.',
   steps: [
     {
       number: '01',
-      title: 'Conversa e medição',
-      text: 'Você conta o que precisa pelo WhatsApp — pode ser só uma ideia ou um rascunho. Medimos o ambiente e entendemos sua rotina, estilo e orçamento.',
-      image: cozinhaVerdeBancada,
-      imageAlt: 'Cozinha planejada verde com gavetas e bancada branca',
-      real: true,
+      title: 'Medição',
+      text: 'Conforme disponibilidade da agenda.',
+      image: processoMedicao,
+      imageAlt: 'Marceneiro da Mãos que Criam medindo a espessura de um painel de madeira',
     },
     {
       number: '02',
-      title: 'Projeto 3D',
-      text: 'Desenvolvemos o projeto em 3D com cores, materiais e medidas. Ajustamos juntos até ficar exatamente como você idealizou.',
-      image: processo3d,
-      imageAlt: 'Mesa de projeto com modelo 3D de cozinha e amostras de madeira',
-      real: false,
+      title: 'Orçamento em 2 a 4 dias',
+      text: 'Calculado com detalhe para não ter surpresa no preço.',
+      image: processoOrcamento,
+      imageAlt: 'Calculadora, trena e anotações de medidas sobre a bancada da marcenaria',
     },
     {
       number: '03',
-      title: 'Produção',
-      text: 'Com o projeto aprovado, as peças são cortadas, bordeadas e preparadas com materiais de alta qualidade.',
-      image: processoProducao,
-      imageAlt: 'Marcenaria com chapas de MDF e módulos de armário em produção',
-      real: false,
+      title: 'Projeto 3D',
+      text: 'Com arquiteto parceiro, conforme disponibilidade.',
+      image: processoMateriais,
+      imageAlt: 'Mostruário de cores e padrões de MDF com o cartão da Mãos que Criam',
     },
     {
       number: '04',
-      title: 'Entrega e montagem',
-      text: 'Nossa equipe entrega e monta tudo no local, com cuidado e limpeza. Em até 30 dias úteis, o ambiente está pronto.',
+      title: 'Fechamento em Novembro',
+      text: 'Você aprova o projeto e trava preço e data.',
+      image: processoFabrica,
+      imageAlt: 'Vista do alto da fábrica da Mãos que Criam em Ribeirão Preto, com móveis em produção',
+    },
+    {
+      number: '05',
+      title: 'Entrega e Instalação - Janeiro',
+      text: 'Prazo de até 60 dias garantido em contrato.',
       image: equipeInstalacao,
       imageAlt: 'Montadores da Mãos que Criam instalando armários aéreos',
-      real: true,
       credit: 'Vídeo: @mayron.f3rr3ira',
     },
   ],
 }
+
+export const oQueFazemos = {
+  eyebrow: 'O que fazemos',
+  title: 'Todo tipo de móvel planejado <em>sob medida</em>, do residencial ao comercial.',
+  categorias: [
+    {
+      title: 'Residencial',
+      itens: ['Cozinhas', 'Dormitórios', 'Closets', 'Banheiros', 'Área gourmet', 'Sala', 'Home', 'Painel', 'Lavanderia'],
+    },
+    {
+      title: 'Comercial',
+      itens: ['Balcão para supermercado', 'Balcão comercial', 'Mesa comercial para reunião', 'Móveis para lojas e escritórios'],
+    },
+    {
+      title: 'Projetos Especiais',
+      itens: ['Barraca de festa junina', 'Outros móveis personalizados sob medida'],
+    },
+  ],
+  imagem: {
+    src: barracaJunina,
+    alt: 'Barraca de festa junina em MDF feita sob medida na fábrica da Mãos que Criam',
+    legenda: 'Projeto especial: barraca de festa junina feita na nossa fábrica',
+  },
+}
+
+export const garantia = [
+  'Prazo de entrega garantido em contrato.',
+  'Garantia contra defeitos de fabricação, conforme o Código de Defesa do Consumidor',
+]
 
 export const depoimentos = {
   eyebrow: 'Clientes',
@@ -159,11 +205,11 @@ export const depoimentos = {
 export const faq = [
   {
     q: 'Qual é o prazo para ficar pronto?',
-    a: 'Fabricação, entrega e montagem são realizadas em até 30 dias úteis após a aprovação do projeto. A agenda de produção tem vagas limitadas, por isso vale reservar com antecedência.',
+    a: 'Entrega e instalação em até 60 dias, com o prazo garantido em contrato. Para receber em Janeiro, o fechamento precisa ser até 30 de Novembro.',
   },
   {
     q: 'Vocês fazem o projeto em 3D?',
-    a: 'Sim. Antes de produzir, você vê o ambiente em 3D com as cores, os acabamentos e as medidas, e pode pedir ajustes.',
+    a: 'Sim, com arquiteto parceiro, conforme disponibilidade. Antes de produzir, você vê o ambiente em 3D com as cores, os acabamentos e as medidas, e pode pedir ajustes.',
   },
   {
     q: 'Atendem apenas Ribeirão Preto?',

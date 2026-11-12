@@ -4,6 +4,7 @@ import { useEffect, useState, type MouseEvent } from 'react'
 import logoClaro from '@/assets/images/logo-simbolo-claro.webp'
 import logoEscuro from '@/assets/images/logo-simbolo-escuro.webp'
 import { Icon } from '@/components/ui/Icon'
+import { campanha } from '@/data/conteudo'
 import { allSections, company, navigation } from '@/data/site'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useScrollPosition } from '@/hooks/useScrollPosition'
@@ -52,14 +53,24 @@ export const Header = () => {
 
   return (
     <>
-      <header
-        className={cn(
-          'fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-luxe',
-          isScrolled && !isOpen
-            ? 'bg-linho/92 py-3 shadow-[0_1px_0_rgba(29,24,20,0.08)] backdrop-blur-md'
-            : 'py-5',
-        )}
-      >
+      <header className="fixed inset-x-0 top-0 z-50">
+        {/* Faixa da campanha, sempre visível no topo */}
+        <a
+          href={buildWhatsAppLink(company.contact.whatsapp, campanha.mensagem)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-freijo-700 px-4 py-2 text-center text-[0.8rem] font-semibold leading-snug text-white transition-colors hover:bg-freijo-800 sm:text-sm"
+        >
+          {campanha.faixa}
+        </a>
+        <div
+          className={cn(
+            'transition-all duration-500 ease-luxe',
+            isScrolled && !isOpen
+              ? 'bg-linho/92 py-3 shadow-[0_1px_0_rgba(29,24,20,0.08)] backdrop-blur-md'
+              : 'py-5',
+          )}
+        >
         <div className="container-site flex items-center justify-between gap-6">
           <a href="#inicio" onClick={(e) => go(e, 'inicio')} aria-label={`${company.fullName} — início`}>
             <Logo light={light} />
@@ -120,6 +131,7 @@ export const Header = () => {
             </button>
           </div>
         </div>
+        </div>
       </header>
 
       <AnimatePresence>
@@ -131,7 +143,7 @@ export const Header = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="veio fixed inset-0 z-40 overflow-y-auto bg-linho pb-10 pt-28 xl:hidden"
+            className="veio fixed inset-0 z-40 overflow-y-auto bg-linho pb-10 pt-40 xl:hidden"
           >
             <nav aria-label="Menu mobile" className="container-site">
               <ul className="flex flex-col">

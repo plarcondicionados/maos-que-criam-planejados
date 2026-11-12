@@ -1,5 +1,6 @@
 import logoCompleta from '@/assets/images/logo-completa-clara.webp'
 import { Icon } from '@/components/ui/Icon'
+import { garantia } from '@/data/conteudo'
 import { company, navigation } from '@/data/site'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll'
 import { buildWhatsAppLink } from '@/lib/utils'
@@ -80,6 +81,21 @@ export const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Garantia */}
+      <div className="border-t border-white/10">
+        <ul className="container-site flex flex-col gap-3 py-8 text-sm text-linho/85 sm:flex-row sm:gap-10">
+          {garantia.map((g) => (
+            <li key={g} className="flex items-start gap-3">
+              <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-freijo-200" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z" />
+                <path d="m8.5 12 2.5 2.5 4.5-5" />
+              </svg>
+              {g}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="border-t border-white/10">

@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, type ImgHTMLAttributes } from 'react'
 
 import { Icon } from '@/components/ui/Icon'
-import { hero } from '@/data/conteudo'
+import { campanha, hero } from '@/data/conteudo'
 import { company } from '@/data/site'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll'
 import { buildWhatsAppLink } from '@/lib/utils'
@@ -35,7 +35,7 @@ export const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-carvao/92 via-carvao/65 to-carvao/15" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-2/5 bg-gradient-to-t from-carvao/85 to-transparent" />
 
-      <div className="container-site flex flex-1 items-center pb-14 pt-32 sm:pt-36">
+      <div className="container-site flex flex-1 items-center pb-14 pt-40 sm:pt-44">
         <div className="grid w-full items-center gap-12 lg:grid-cols-[1fr_auto]">
           <div className="max-w-2xl">
             <motion.span
@@ -62,14 +62,18 @@ export const Hero = () => {
               ))}
             </h1>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.55, ease }}
-              className="mt-7 max-w-xl text-base leading-relaxed text-linho/75 sm:text-lg"
+              className="mt-7 max-w-xl space-y-3 text-base leading-relaxed text-linho/75 sm:text-lg"
             >
-              {hero.subtitle}
-            </motion.p>
+              {hero.subtitle.map((p, i) => (
+                <p key={p} className={i === hero.subtitle.length - 1 ? 'font-semibold text-freijo-200' : undefined}>
+                  {p}
+                </p>
+              ))}
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 18 }}
@@ -78,7 +82,7 @@ export const Hero = () => {
               className="mt-9 flex flex-col gap-3 sm:flex-row"
             >
               <a
-                href={buildWhatsAppLink(company.contact.whatsapp, company.whatsappMessage)}
+                href={buildWhatsAppLink(company.contact.whatsapp, campanha.mensagem)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primario"

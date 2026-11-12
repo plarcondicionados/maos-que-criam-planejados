@@ -11,7 +11,7 @@ export const Processo = () => (
         align="center"
         eyebrow={processo.eyebrow}
         title={processo.title}
-        text="Quatro etapas claras, com você acompanhando cada uma. Fabricação, entrega e montagem em até 30 dias úteis."
+        text={processo.text}
       />
 
       <ol className="relative mt-16 space-y-16 sm:mt-20 lg:space-y-24">
@@ -32,15 +32,10 @@ export const Processo = () => (
                     src={s.image}
                     alt={s.imageAlt}
                     wrapperClassName="aspect-[4/3] rounded-[1.6rem]"
-                    className={cn(s.real && 'object-[center_40%]')}
+                    className="object-[center_40%]"
                   />
                   {'credit' in s && s.credit && (
                     <span className="absolute bottom-3 right-4 text-[0.6rem] text-white/75">{s.credit}</span>
-                  )}
-                  {!s.real && (
-                    <span className="absolute bottom-3 right-3 rounded-full bg-carvao/55 px-2.5 py-1 text-[0.58rem] uppercase tracking-widest text-linho/80 backdrop-blur">
-                      Imagem ilustrativa
-                    </span>
                   )}
                 </div>
               </Reveal>

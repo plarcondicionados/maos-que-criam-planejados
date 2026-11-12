@@ -29,7 +29,7 @@ type SmoothScrollContextValue = {
 const SmoothScrollContext = createContext<SmoothScrollContextValue | null>(null)
 
 /** Altura do header fixo, para o âncora não parar embaixo dele. */
-const HEADER_OFFSET = -88
+const HEADER_OFFSET = -124
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
