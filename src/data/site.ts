@@ -19,12 +19,12 @@ export const company = {
     phoneHref: 'tel:+5516991594713',
     // PENDÊNCIA: e-mail não informado
     email: '',
-    // PENDÊNCIA: endereço da marcenaria/showroom não informado
-    address: '',
+    // Endereço da fábrica
+    address: 'Av. Mogiana, 278 - Vila Mariana, Ribeirão Preto - SP, 14075-260',
     // PENDÊNCIA: horário de atendimento não informado
     hours: '',
-    // Busca usada no mapa enquanto não há endereço exato
-    mapsQuery: 'Ribeirão Preto, SP',
+    // Busca usada no mapa
+    mapsQuery: 'Avenida Mogiana, 278, Vila Mariana, Ribeirão Preto - SP, 14075-260',
   },
 
   social: {

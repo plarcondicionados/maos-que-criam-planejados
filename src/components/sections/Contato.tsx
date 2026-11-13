@@ -76,7 +76,7 @@ export const Contato = () => {
     { icon: 'phone', label: 'Telefone', value: c.phone, href: c.phoneHref },
     { icon: 'mail', label: 'E-mail', value: c.email, href: `mailto:${c.email}` },
     { icon: 'instagram', label: 'Instagram', value: company.social.instagramHandle, href: company.social.instagram, external: true },
-    { icon: 'pin', label: 'Endereço', value: c.address || `${company.city}/${company.state}`, href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.address || c.mapsQuery)}`, external: true },
+    { icon: 'pin', label: 'Endereço', value: c.address || `${company.city}/${company.state}`, href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.mapsQuery)}`, external: true },
     { icon: 'clock', label: 'Atendimento', value: c.hours },
   ].filter((x) => x.value)
 
@@ -129,7 +129,7 @@ export const Contato = () => {
             <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
               <iframe
                 title={`Mapa — ${company.city}/${company.state}`}
-                src={`https://www.google.com/maps?q=${encodeURIComponent(c.address || c.mapsQuery)}&output=embed`}
+                src={`https://www.google.com/maps?q=${encodeURIComponent(c.mapsQuery)}&output=embed`}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-60 w-full grayscale-[0.6] invert-[0.9] hue-rotate-180"
