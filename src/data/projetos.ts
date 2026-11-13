@@ -9,7 +9,6 @@
  */
 import closetGavetas from '@/assets/images/closet-gavetas.webp'
 import cozinhaFreijoAereos from '@/assets/images/cozinha-freijo-aereos.webp'
-import cozinhaVerdeBancada from '@/assets/images/cozinha-verde-bancada.webp'
 import banheiroArmario from '@/assets/images/banheiro-armario-alto.webp'
 import banheiroBancada from '@/assets/images/banheiro-bancada.webp'
 import gourmetFrigobar from '@/assets/images/gourmet-frigobar.webp'
@@ -162,7 +161,6 @@ export const projetos: Projeto[] = [
   { src: foto('home-office-tijolinho'), alt: 'Bancada de home office em madeira com gaveteiro', title: 'Home office em L', categoria: 'escritorios' },
   { src: foto('cozinha-amadeirada'), alt: 'Cozinha planejada amadeirada com gavetas', title: 'Cozinha amadeirada', categoria: 'cozinhas' },
   // Projetos recentes (reels do Instagram)
-  { src: cozinhaVerdeBancada, alt: 'Cozinha planejada verde musgo com gavetas e puxadores pretos', title: 'Cozinha verde musgo', categoria: 'cozinhas' },
   { src: quartoEspelhos, alt: 'Guarda-roupa com três portas espelhadas em quarto de casal', title: 'Roupeiro com espelhos', categoria: 'dormitorios' },
   { src: cozinhaFreijoAereos, alt: 'Cozinha planejada em freijó com aéreos até o teto', title: 'Cozinha em freijó', categoria: 'cozinhas' },
   { src: banheiroArmario, alt: 'Armário alto planejado para banheiro em laca fosca', title: 'Armário para banheiro', categoria: 'banheiros' },
