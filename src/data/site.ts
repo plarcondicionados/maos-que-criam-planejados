@@ -56,6 +56,7 @@ export const navigation = [
 export const allSections = [
   'inicio',
   'o-que-fazemos',
+  'fabrica',
   'sobre',
   'ambientes',
   'manutencao',

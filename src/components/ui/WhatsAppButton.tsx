@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 
+import { campanha } from '@/data/conteudo'
 import { company } from '@/data/site'
 import { useScrollPosition } from '@/hooks/useScrollPosition'
 import { buildWhatsAppLink } from '@/lib/utils'
@@ -7,7 +8,7 @@ import { buildWhatsAppLink } from '@/lib/utils'
 /** Botão flutuante de WhatsApp — aparece assim que o usuário passa do hero. */
 export const WhatsAppButton = () => {
   const isVisible = useScrollPosition(420)
-  const href = buildWhatsAppLink(company.contact.whatsapp, company.whatsappMessage)
+  const href = buildWhatsAppLink(company.contact.whatsapp, campanha.mensagem)
 
   return (
     <AnimatePresence>

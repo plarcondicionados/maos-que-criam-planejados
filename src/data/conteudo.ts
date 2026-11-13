@@ -7,6 +7,7 @@ import processoMateriais from '@/assets/images/processo-materiais.webp'
 import processoFabrica from '@/assets/images/processo-fabrica.webp'
 import equipeInstalacao from '@/assets/images/equipe-instalacao.webp'
 import barracaJunina from '@/assets/images/servico-barraca-junina.webp'
+import fabricaVistaGeral from '@/assets/images/fabrica-vista-geral.webp'
 
 /** Campanha de fim de ano: faixa no topo e botão principal do hero. */
 export const campanha = {
@@ -165,6 +166,21 @@ export const oQueFazemos = {
     src: barracaJunina,
     alt: 'Barraca de festa junina em MDF feita sob medida na fábrica da Mãos que Criam',
     legenda: 'Projeto especial: barraca de festa junina feita na nossa fábrica',
+  },
+}
+
+export const fabrica = {
+  eyebrow: 'Fábrica própria · Ribeirão Preto/SP',
+  title: 'Seu móvel é feito <em>aqui</em>, na nossa fábrica.',
+  text: 'Cada projeto é produzido na fábrica da Mãos que Criam, em Ribeirão Preto, por quem vai entregar e instalar na sua casa ou empresa.',
+  pontos: [
+    { title: 'Produção própria', text: 'Corte, montagem e acabamento feitos aqui, com a nossa equipe.' },
+    { title: 'Maquinário profissional', text: 'Esquadrejadeira e equipamentos de marcenaria para cortes precisos e acabamento de qualidade.' },
+    { title: 'Acompanhamento de perto', text: 'Do corte à instalação, o Robim acompanha cada etapa do seu projeto.' },
+  ],
+  imagem: {
+    src: fabricaVistaGeral,
+    alt: 'Vista do alto da fábrica da Mãos que Criam, com esquadrejadeira, bancadas e móveis em produção',
   },
 }
 
